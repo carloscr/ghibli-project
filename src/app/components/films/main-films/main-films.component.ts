@@ -12,11 +12,11 @@ export class MainFilmsComponent implements OnInit {
   filmsList: Array<Film> = new Array<Film>();
   constructor(private filmsService: FilmsService) { }
 
-  ngOnInit() {debugger;
+  ngOnInit() {
     this.filmsService.findAll().subscribe(r=>this.filmsList = r, e=>console.log(e));
   }
 
-  findByFilters($event: Film) {debugger;
+  findByFilters($event: Film) {
     this.filmsService.findByFilter($event).subscribe(r=>this.filmsList = r, e=>console.log(e));
   }
 }

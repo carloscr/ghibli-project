@@ -2,12 +2,12 @@
     <div class="form-row">
         <div class="form-group col-md-6">
         <label for="inputCity">Name</label>
-        <input type="text" (change)="changeFilters()" [(ngModel)]="people.name" [ngModelOptions]="{standalone: true}" class="form-control" id="inputCity">
+        <input type="text" placeholder="Full Name" (change)="changeFilters()" [(ngModel)]="people.name" [ngModelOptions]="{standalone: true}" class="form-control" id="inputCity">
         </div>
         <div class="form-group col-md-6">
         <label for="inputState">Gender</label>
-        <select id="inputState" (change)="changeFilters()" [(ngModel)]="people.gender" [ngModelOptions]="{standalone: true}" class="form-control">
-            <option selected value=''>Choose...</option>
+        <select id="inputState" placeholder="Choose" (change)="changeFilters()" [(ngModel)]="people.gender" [ngModelOptions]="{standalone: true}" class="form-control">
+            <option selected value=''>None</option>
             <option value='Male'>Male</option>
             <option value='Female'>Female</option>
         </select>

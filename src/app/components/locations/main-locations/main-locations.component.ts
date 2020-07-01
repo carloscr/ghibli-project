@@ -12,11 +12,11 @@ export class MainLocationsComponent implements OnInit {
   locationsList: Array<Location> = new Array<Location>();
   constructor(private locationsService: LocationsService) { }
 
-  ngOnInit() {debugger;
+  ngOnInit() {
     this.locationsService.findAll().subscribe(r=>this.locationsList = r, e=>console.log(e));
   }
 
-  findByFilters($event: Location) {debugger;
+  findByFilters($event: Location) {
     this.locationsService.findByFilter($event).subscribe(r=>this.locationsList = r, e=>console.log(e));
   }
 

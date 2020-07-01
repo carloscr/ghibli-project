@@ -13,7 +13,7 @@ export class FilmDetailComponent implements OnInit {
   film: Film = new Film();
   constructor(private filmsService: FilmsService, private route: ActivatedRoute) { }
 
-  ngOnInit() {debugger;
+  ngOnInit() {
     let id: string = this.route.snapshot.paramMap.get("id");
     this.filmsService.findById(id).subscribe(r=>this.film=r, e=>console.log(e));
   }
