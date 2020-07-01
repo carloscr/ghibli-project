@@ -13,17 +13,17 @@ export class PeopleService {
   private api_name: string = 'people';
 
   // Servicio 7
-  findAll(): Observable<Array<People>> {
+  public findAll(): Observable<Array<People>> {
     return this.http.get<Array<People>>(`${environment.API_URL}/${this.api_name}`);
   }
 
   // Servicio 8
-  findById(id: string): Observable<People> {
+  public findById(id: string): Observable<People> {
     return this.http.get<People>(`${environment.API_URL}/${this.api_name}/${id}`);
   }
 
   // Servicio 9
-  findByFilter(filters: People): Observable<Array<People>> {
+  public findByFilter(filters: People): Observable<Array<People>> {
     let filtersString: string = '?limit=249';
     if(!filters || (!filters.name && !filters.gender)) return this.findAll();
     if(filters.gender) {

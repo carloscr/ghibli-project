@@ -15,7 +15,7 @@ export class FiltersFilmComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeFilters() {
+  public changeFilters(): void {
     this.onChangeFilters.emit(this.film);
   }
 

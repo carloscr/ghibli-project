@@ -13,12 +13,12 @@ export class SpeciesService {
   private api_name: string = 'species';
 
   // Servicio 10
-  findAll(): Observable<Array<Specie>> {
+  public findAll(): Observable<Array<Specie>> {
     return this.http.get<Array<Specie>>(`${environment.API_URL}/${this.api_name}`);
   }
 
   // Servicio 11
-  findById(id: string): Observable<Specie> {
+  public findById(id: string): Observable<Specie> {
     return this.http.get<Specie>(`${environment.API_URL}/${this.api_name}/${id}`);
   }
 }

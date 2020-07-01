@@ -13,12 +13,12 @@ export class VehiclesService {
   private api_name: string = 'vehicles';
 
   // Servicio 12
-  findAll(): Observable<Array<Vehicle>> {
+  public findAll(): Observable<Array<Vehicle>> {
     return this.http.get<Array<Vehicle>>(`${environment.API_URL}/${this.api_name}`);
   }
 
   // Servicio 13
-  findById(id: string): Observable<Vehicle> {
+  public findById(id: string): Observable<Vehicle> {
     return this.http.get<Vehicle>(`${environment.API_URL}/${this.api_name}/${id}`);
   }
 }

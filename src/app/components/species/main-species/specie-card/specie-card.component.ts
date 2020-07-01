@@ -15,7 +15,7 @@ export class SpecieCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  showDetail() {
+  public showDetail(): void {
     this.router.navigate([`species/${this.specie.id}`]);
   }
 }

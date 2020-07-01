@@ -13,17 +13,17 @@ export class FilmsService {
   private api_name: string = 'films';
 
   // Servicio 1
-  findAll(): Observable<Array<Film>> {
+  public findAll(): Observable<Array<Film>> {
     return this.http.get<Array<Film>>(`${environment.API_URL}/${this.api_name}`);
   }
 
   // Servicio 2
-  findById(id: string): Observable<Film> {
+  public findById(id: string): Observable<Film> {
     return this.http.get<Film>(`${environment.API_URL}/${this.api_name}/${id}`);
   }
 
   // Servicio 3
-  findByFilter(filters: Film): Observable<Array<Film>> {
+  public findByFilter(filters: Film): Observable<Array<Film>> {
     let filtersString: string = '?limit=249';
     if(!filters || (!filters.title && !filters.director)) return this.findAll();
     if(filters.title) {

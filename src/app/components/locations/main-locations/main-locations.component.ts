@@ -16,7 +16,7 @@ export class MainLocationsComponent implements OnInit {
     this.locationsService.findAll().subscribe(r=>this.locationsList = r, e=>console.log(e));
   }
 
-  findByFilters($event: Location) {
+  public findByFilters($event: Location): void {
     this.locationsService.findByFilter($event).subscribe(r=>this.locationsList = r, e=>console.log(e));
   }
 

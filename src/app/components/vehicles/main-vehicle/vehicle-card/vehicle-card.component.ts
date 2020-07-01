@@ -15,7 +15,7 @@ export class VehicleCardComponent implements OnInit {
   ngOnInit() {
   }
 
-  showDetail() {
+  public showDetail(): void {
     this.router.navigate([`vehicles/${this.vehicle.id}`]);
   }
 

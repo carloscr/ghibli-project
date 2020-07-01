@@ -22,7 +22,7 @@ export class PeopleCardComponent implements OnInit {
     }
   }
 
-  showDetail() {
+  public showDetail(): void {
     this.router.navigate([`people/${this.people.id}`]);
   }
 

@@ -16,7 +16,7 @@ export class MainPeopleComponent implements OnInit {
     this.peopleService.findAll().subscribe(r=>this.peopleList = r, e=>console.log(e));
   }
 
-  findByFilters($event: People) {
+  public findByFilters($event: People): void {
     this.peopleService.findByFilter($event).subscribe(r=>this.peopleList = r, e=>console.log(e));
   }
 

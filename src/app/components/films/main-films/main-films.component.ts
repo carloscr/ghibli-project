@@ -16,7 +16,7 @@ export class MainFilmsComponent implements OnInit {
     this.filmsService.findAll().subscribe(r=>this.filmsList = r, e=>console.log(e));
   }
 
-  findByFilters($event: Film) {
+  public findByFilters($event: Film): void {
     this.filmsService.findByFilter($event).subscribe(r=>this.filmsList = r, e=>console.log(e));
   }
 }

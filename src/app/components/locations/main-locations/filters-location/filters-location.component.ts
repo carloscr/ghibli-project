@@ -15,7 +15,7 @@ export class FiltersLocationComponent implements OnInit {
   ngOnInit() {
   }
 
-  changeFilters() {
+  public changeFilters(): void {
     this.onChangeFilters.emit(this.location);
   }
 

@@ -23,7 +23,7 @@ export class FilmCardComponent implements OnInit {
     }
   }
 
-  showDetail() {
+  public showDetail(): void {
     this.router.navigate([`/films/${this.film.id}`]);
   }
 
