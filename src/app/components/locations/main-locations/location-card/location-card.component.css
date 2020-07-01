@@ -1,0 +1,10 @@
+.card:hover {
+    transform: scale(1.06);
+    transition: transform .2s ease;
+    cursor: pointer;
+}
+
+.card {
+    background-color: #FFD1DC;
+    border: 5px solid #FFD1DC;
+}

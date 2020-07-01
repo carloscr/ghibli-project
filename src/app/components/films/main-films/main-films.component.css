@@ -1,0 +1,29 @@
+img {
+    display: inline;
+    margin: 0 auto;
+}
+.image-cropper{
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background: #eee no-repeat center;
+    background-size: cover;
+}
+
+
+loading-animation{
+    left:0;
+    width:10%;
+    animation: translate 15s infinite linear;
+}
+img {
+animation: upDown 1.5s alternate infinite ease-in-out;
+width:100%;
+}
+
+@keyframes upDown {
+to { transform: translatey(100px);}
+}
+@keyframes translate {
+to { transform: translatex(900%);}
+}

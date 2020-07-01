@@ -1,0 +1,18 @@
+<div class="container m-auto">
+    <div class="row justify-content-center">
+        <div *ngIf="!film || !film.id" class="text-center justify-content-center loading-animation">
+            <img src="assets/polvo_png.png" style="width: 350px;" class="card-img-top m-auto" alt="...">
+        </div>
+        <div *ngIf="film && film.id" class="col-xs-4" style="width: 550px;">
+            <div class="card">
+                <img src="assets/totoro_asset.jpg" style="width: 350px;" class="card-img-top m-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{film.title}}</h5>
+                    <p class="card-text">{{film.description}}</p>
+                    <p class="card-text"><small class="text-muted">{{film.release_date}}</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

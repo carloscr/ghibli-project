@@ -1,0 +1,6 @@
+<div *ngIf="!speciesList || !speciesList.length" class="text-center justify-content-center loading-animation">
+    <img src="assets/polvo_png.png" style="width: 350px;" class="card-img-top m-auto" alt="...">
+</div>
+<div *ngIf="speciesList && speciesList.length" class="card-deck justify-content-center">
+    <app-specie-card *ngFor="let specie of speciesList" [specie]="specie"></app-specie-card>
+</div>

@@ -1,0 +1,21 @@
+<form class="col-10 m-auto filters">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="inputCity">Title</label>
+        <input type="text" (change)="changeFilters()" [(ngModel)]="film.title" [ngModelOptions]="{standalone: true}" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-6">
+        <label for="inputState">Director</label>
+        <select id="inputState" (change)="changeFilters()" [(ngModel)]="film.director" [ngModelOptions]="{standalone: true}" class="form-control">
+            <option selected value=''>Choose...</option>
+            <option value='Hayao Miyazaki'>Hayao Miyazaki</option>
+            <option value='Isao Takahata'>Isao Takahata</option>
+            <option value='Gorō Miyazaki'>Gorō Miyazaki</option>
+            <option value='Hiromasa Yonebayashi'>Hiromasa Yonebayashi</option>
+            <option value='Hiroyuki Morita'>Hiroyuki Morita</option>
+            <option value='Yoshifumi Kondō'>Yoshifumi Kondō</option>
+        </select>
+        </div>
+    </div>
+    <!--button type="submit" class="btn btn-primary">Sign in</button-->
+</form>

@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <app-filters-location (onChangeFilters)="findByFilters($event)"></app-filters-location>
+        </div>
+        <div *ngIf="!locationsList || !locationsList.length" class="col-12 d-flex justify-content-center loading-animation">
+            <img src="assets/polvo_png.png" style="width: 350px;" class="card-img-top m-auto" alt="...">
+        </div>
+        <div *ngIf="locationsList && locationsList.length" class="card-deck justify-content-center">
+            <app-location-card *ngFor="let location of locationsList" [location]="location"></app-location-card>
+        </div>
+    </div>
+</div>

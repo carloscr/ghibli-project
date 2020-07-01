@@ -1,0 +1,20 @@
+<form class="col-10 m-auto filters">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="inputCity">Name</label>
+        <input type="text" (change)="changeFilters()" [(ngModel)]="location.name" [ngModelOptions]="{standalone: true}" class="form-control" id="inputCity">
+        </div>
+        <div class="form-group col-md-6">
+        <label for="inputState">Climate</label>
+        <select id="inputState" (change)="changeFilters()" [(ngModel)]="location.climate" [ngModelOptions]="{standalone: true}" class="form-control">
+            <option selected value=''>Choose...</option>
+            <option value='Continental'>Continental</option>
+            <option value='Mild'>Mild</option>
+            <option value='Tropical'>Tropical</option>
+            <option value='Dry'>Dry</option>
+            <option value='TODO'>TODO</option>
+        </select>
+        </div>
+    </div>
+    <!--button type="submit" class="btn btn-primary">Sign in</button-->
+</form>

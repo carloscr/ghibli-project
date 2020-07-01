@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mb-3">
+            <app-filters-people (onChangeFilters)="findByFilters($event)"></app-filters-people>
+        </div>
+        <div *ngIf="!peopleList || !peopleList.length" class="col-12 d-flex justify-content-center loading-animation">
+            <img src="assets/polvo_png.png" style="width: 350px;" class="card-img-top m-auto" alt="...">
+        </div>
+        <div *ngIf="peopleList && peopleList.length" class="card-deck justify-content-center">
+            <app-people-card *ngFor="let people of peopleList" [people]="people"></app-people-card>
+        </div>
+    </div>
+</div>

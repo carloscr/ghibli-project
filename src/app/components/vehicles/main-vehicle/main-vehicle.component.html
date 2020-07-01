@@ -1,0 +1,6 @@
+<div *ngIf="!vehiclesList || !vehiclesList.length" class="text-center justify-content-center loading-animation">
+    <img src="assets/polvo_png.png" style="width: 350px;" class="card-img-top m-auto" alt="...">
+</div>
+<div *ngIf="vehiclesList && vehiclesList.length" class="card-deck justify-content-center">
+    <app-vehicle-card *ngFor="let vehicle of vehiclesList" [vehicle]="vehicle"></app-vehicle-card>
+</div>

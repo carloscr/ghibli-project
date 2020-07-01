@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div *ngIf="!specie || !specie.id" class="text-center justify-content-center loading-animation">
+            <img src="assets/polvo_png.png" style="width: 350px;" class="card-img-top m-auto" alt="...">
+        </div>
+        <div *ngIf="specie && specie.id" class="col-xs-4" style="width: 550px;">
+            <div class="card">
+                <img src="assets/specie_asset.jpg" style="width: 350px;" class="card-img-top m-auto" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{specie.name}}</h5>
+                    <h6>Eye Colors</h6>
+                    <p class="card-text">{{specie.eye_colors}}</p>
+                    <h6>Hair Colors</h6>
+                    <p class="card-text">{{specie.hair_colors}}</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#filmSpecie">Film</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="filmSpecie" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Film(s)</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div *ngIf="specie && specie.films" class="card-deck justify-content-center">
+                <app-film-card *ngFor="let film of specie.films" [path]="film"></app-film-card>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button #closeFilmModal type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+    </div>
+</div>
+
